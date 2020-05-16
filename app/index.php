@@ -16,7 +16,7 @@
 			$userDAO= new UserDAO();
 			$message=$userDAO->authenticate($nric,$password);
 			if ($message=='SUCCESS'){
-				header('Location: mainpage.php');
+				header('Location: homepage-Loggedin.html');
 			}else{
 				$_SESSION['errors'][]=$message;
 			}
@@ -273,7 +273,7 @@
 				</div>
 				<div class="col-lg-7">
 					<div class="info-text">
-						<h2>We’re here to help</h2>
+						<h2>Weï¿½re here to help</h2>
 						<h5>Monday to Thursday (8am to 8pm), and Friday (8am to 5pm).</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>
 						<ul>
