@@ -1,30 +1,3 @@
-<?php
-	require_once 'include/common.php';
-
-	if (isset($_POST['login'])){
-		$_SESSION['errors'] = [];
-		if (!isset($_POST['nric']) || strlen(trim($_POST['nric'])) == 0){
-			$_SESSION['errors'][]='Please enter NRIC!';
-		}
-		if (!isset($_POST['password']) || strlen(trim($_POST['password'])) == 0){
-			$_SESSION['errors'][]='Please enter password!';
-		}
-		if (count($_SESSION['errors'])==0){
-			$nric=$_POST['nric'];
-			$password= $_POST['password'];
-
-			$userDAO= new UserDAO();
-			$message=$userDAO->authenticate($nric,$password);
-			if ($message=='SUCCESS'){
-				header('Location: mainpage.php');
-			}else{
-				$_SESSION['errors'][]=$message;
-			}
-		}
-	}elseif(isset($_POST['register'])){
-		header('Location: register.php');
-	}
-?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -102,15 +75,12 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<form class="hero-form" action='index.php' method='POST'>
-						<?php
-							printErrors();
-						?>
-						<input type="text" name='nric' placeholder="Your NRIC">
-						<input type="password" name='password' placeholder="Password">
+					<form class="hero-form">
+						<input type="text" placeholder="Your Name">
+						<input type="text" placeholder="Your E-mail">
+						<input type="text" placeholder="Your Phone">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-						<button class="site-btn" name=login>Login</button><button class="site-btn" name='register'>Register New Account</button>
-						<p>Forget password? <a href='forgetpassword.php'>click here</a></p>
+						<button class="site-btn">Apply for a loan now!</button>
 					</form>
 				</div>
 			</div>
@@ -273,7 +243,7 @@
 				</div>
 				<div class="col-lg-7">
 					<div class="info-text">
-						<h2>We’re here to help</h2>
+						<h2>Weâ€™re here to help</h2>
 						<h5>Monday to Thursday (8am to 8pm), and Friday (8am to 5pm).</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Ut gravida mattis magna, non varius lorem sodales nec. In libero orci, ornare non nisl.</p>
 						<ul>
