@@ -80,8 +80,8 @@
 					<div class="hs-text">
 						<h2>Looking for Financial planner?</h2>
 						<p>Plan for your future and book a financial planner now.</p>
-                        <a href="adult.php" class="site-btn sb-dark">Adult</a>
-                        <a href="youth.php" class="site-btn sb-dark">Youth</a>
+                        <a href="adultappointment.php" class="site-btn sb-dark">Adult</a>
+                        <a href="youthappointment.php" class="site-btn sb-dark">Youth</a>
 					</div>
 				</div>
 			</div>

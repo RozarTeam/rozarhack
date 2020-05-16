@@ -8,8 +8,7 @@ class FinancialPlannerDAO
     public function retrieveAll(){
 
 
-        $sql = 'select * from financialplanner
-                ';
+        $sql = 'select * from financialplanner';
 
         $connMgr = new ConnectionManager();       
         $conn = $connMgr->getConnection();
@@ -19,12 +18,11 @@ class FinancialPlannerDAO
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $results=[];
         while($row=$stmt->fetch()){
-            $results = new FinancialPlanner($row['name']);
-            $result []= $results; 
+            $results[] = $row['name'];
         }
         $stmt = null;
         $pdo = null;
-        return $result;
+        return $results;
     }
 
 

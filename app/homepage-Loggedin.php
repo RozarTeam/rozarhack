@@ -132,7 +132,7 @@
 	<div class="row">
 	  <div class="column" style="background-color:#fff;">
 		<h2>&nbsp; &nbsp; Welcome Back</h2><br>
-		<h5>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Your last login was 11:00 AM on Saturday 16th May 2020 </h5>
+		<h5>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Your last login was 12:02 PM on Sunday 17th May 2020 </h5>
 		<h5>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;(You have no new messages) </h5>
 		
 	  </div>

@@ -97,9 +97,8 @@ if(isset($_POST['name'])&&isset($_POST['date'])){
                         <?php 
                             // echo $plannerlist[0]->getName();
                             foreach($plannerlist as $planner){
-                                $plannername=$planner->getName();
                                 // echo $plannername;
-                                echo'<option value="'.$plannername.'">'.$plannername.'</option>';
+                                echo'<option value="'.$planner.'">'.$planner.'</option>';
                             }
                         ?>
                         </select>
@@ -120,7 +119,7 @@ if(isset($_POST['name'])&&isset($_POST['date'])){
 
     
     
-	<!-- Footer Section -->
+	Footer Section
 	<footer class="footer-section">
 		<div class="container">
 			<a href="homepage-Loggedin.php" class="footer-logo">

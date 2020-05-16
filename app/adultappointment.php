@@ -99,9 +99,8 @@ if(isset($_POST['name'])&&isset($_POST['date'])){
                         <?php 
                             // echo $plannerlist[0]->getName();
                             foreach($plannerlist as $planner){
-                                $plannername=$planner->getName();
                                 // echo $plannername;
-                                echo'<option value="'.$plannername.'">'.$plannername.'</option>';
+                                echo'<option value="'.$planner.'">'.$planner.'</option>';
                             }
                         ?>
                         </select>

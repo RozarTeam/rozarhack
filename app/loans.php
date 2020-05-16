@@ -117,23 +117,23 @@
 					<h2>Calculate my Approval Likelihood</h2>
 				</div>
 				<!-- Loans calculator Section  -->
-						<section class="loans-calculator-section spad">
-							<div class="container">
+						<!-- <section class="loans-calculator-section spad">
+							<div class="container"> -->
 								<!-- Hero Section end -->
 									<div class="container">
 										<div class="row">
-											<div class="col-lg-6">
+											<div class="col-lg-12">
 												<form class="hero-form" method='post' id="loanform">
+													<h6 style='color:white'>Loan Amount (in dollars)</h6>
 													<input type="text" placeholder="Loan Amount (in dollars)" name="amount" id='amount'>
-													<input type="text" placeholder="Loan Term (in months)" name="term" id='term'>
+													<h6 style='color:white'>Loan Term (in months)</h6>
+													<input type="number" placeholder="Loan Term (in months)" name="term" id='term'>
+													<h6 style='color:white'>Monthy Income (in dollars)</h6>
 													<input type="text" placeholder="Monthy Income (in dollars)" name="income" id='income'>	
 													<button type='submit' class="site-btn" id="calcbutton">Calculate Likelihood Now!</button> 
 													<!-- <h5 style='color:white' id='perc'>hello</h5> -->
+													<h1 style='color:white' id='perc'></h1>
 												</form>
-											</div>
-											<div class="col-lg-6">
-												<br><br><br><br><br><br>
-												<h1 style='color:white' id='perc'></h1>
 											</div>
 										</div>
 									</div>
@@ -165,8 +165,8 @@
 									<a href="#" class="site-btn sb-dark mt-4">see other loans</a>
 								</div>
 							</div> -->
-						</div>
-					</section>
+						<!-- </div>
+					</section> -->
 					<!-- Loans calculator Section end -->
 			</div>
 		</div>
@@ -307,7 +307,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		percent = percent.toFixed(2);
 		// alert(percent);
 		var percElement = document.getElementById("perc");
-		var percText = document.createTextNode(percent+'%');
+		var percText = document.createTextNode(percent+'% success rate');
 		console.log(percText);
 		percElement.appendChild(percText);
 		$('#perc').show();
