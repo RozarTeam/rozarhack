@@ -249,11 +249,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </html>
 <script>
 function scratchcard(){
-    window.location.replace("https://light.microsite.perxtech.io/game/2?token=1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3&redirect_uri=http://localhost/rozar/app/quest.php");
+    // window.location.replace("https://light.microsite.perxtech.io/game/2?token=1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3&redirect_uri=http://localhost/rozar/app/quest.php");
+    MyWindow=window.open('https://light.microsite.perxtech.io/game/2?token=1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3','MyWindow','width=600,height=600'); 
+    return false;
 }
 
 function gongcha(){
-    window.location.replace("https://light.microsite.perxtech.io/game/3?token=1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3&redirect_uri=http://localhost/rozar/app/quest.php");
+    // window.location.replace("https://light.microsite.perxtech.io/game/3?token=1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3&redirect_uri=http://localhost/rozar/app/quest.php");
+    MyWindow=window.open('https://light.microsite.perxtech.io/game/3?token=1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3','MyWindow','width=600,height=600'); 
+    return false;
 }
 
 function logout(){
