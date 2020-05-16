@@ -137,7 +137,7 @@
                 <td class="column3">Follow the reccommendation spending by Rozar planner for 21days</td>
                 <td class="column4">100%</td>
                 <td class="column5">21/21</td>
-                <td class="column6">Razer $200 voucher</td>
+                <td class="column6">$200 Razer voucher</td>
             </tr>
             </tbody> 
         </table>

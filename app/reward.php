@@ -7,30 +7,30 @@
 // $voucher_json=file_get_contents($api_url);
 // header('Location: '.$api_url);
 // echo "A";
-$curl = curl_init();
+// $curl = curl_init();
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.perxtech.io/v4/vouchers",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "Authorization: Bearer 1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3"
-  ),
-));
+// curl_setopt_array($curl, array(
+//   CURLOPT_URL => "https://api.perxtech.io/v4/vouchers",
+//   CURLOPT_RETURNTRANSFER => true,
+//   CURLOPT_ENCODING => "",
+//   CURLOPT_MAXREDIRS => 10,
+//   CURLOPT_TIMEOUT => 0,
+//   CURLOPT_FOLLOWLOCATION => true,
+//   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//   CURLOPT_CUSTOMREQUEST => "GET",
+//   CURLOPT_HTTPHEADER => array(
+//     "Authorization: Bearer 1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3"
+//   ),
+// ));
 
-$response = curl_exec($curl);
+// $response = curl_exec($curl);
 
-IF($response == FALSE) {
-    echo "cURL Error!".curl_error($curl);
-}
-curl_close($curl);
+// IF($response == FALSE) {
+//     echo "cURL Error!".curl_error($curl);
+// }
+// curl_close($curl);
 
-echo $response;
+// echo $response;
 
 
 ?>
@@ -45,6 +45,9 @@ echo $response;
         
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="shortcut icon"/>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
         <!-- Google font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
@@ -141,10 +144,10 @@ echo $response;
                         <img src="img/coupon/lazada.jpg" height="120" width="120">
                     </td>
                 <td class="column2">
-                    <h6>Lazada</h6>
+                    <h6>$20 Lazada Voucher</h6>
                 </td>
                 <td class="column3">
-                    <input type='checkbox' name='lazada' id='lazada'/>
+                    <button type='button' class="w3-button w3-red" name='lazada' id='lazada' onClick="MyWindow=window.open('resource/voucher1.html','MyWindow','width=600,height=600'); return false;"/>Redeem
                 </td>
             </tr>   
             <tr>
@@ -152,10 +155,10 @@ echo $response;
                     <img src="img/coupon/shopee.jpg" height="120" width="120">
                 </td>
                 <td class="column2">
-                    <h6>Shopee</h6>
+                    <h6>$50 Shopee Voucher</h6>
                 </td>
                 <td class="column3">
-                    <input type='checkbox' name='shopee' id='shopee'/>
+                    <button type='button' class="w3-button w3-red" name='shopee' id='shopee' onClick="MyWindow=window.open('resource/voucher2.html','MyWindow','width=600,height=600'); return false;"/>Redeem
                 </td>
             </tr>   
             <tr>
@@ -163,10 +166,22 @@ echo $response;
                     <img src="img/coupon/steam.jpg" height="120" width="120">
                 </td>
                 <td class="column2">
-                    <h6>Steam</h6>
+                    <h6>$30 Steam Voucher</h6>
                 </td>
                 <td class="column3">
-                        <input type='checkbox' name='steam' id='steam'/>
+                        <button type='button' class="w3-button w3-red" name='steam' id='steam' onClick="MyWindow=window.open('resource/voucher3.html','MyWindow','width=600,height=600'); return false;"/>Redeem
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td class="column1">
+                    <img src="img/coupon/razer.jpg" height="120" width="120">
+                </td>
+                <td class="column2">
+                    <h6>$200 Razer Voucher</h6>
+                </td>
+                <td class="column3">
+                        <button type='button' class="w3-button w3-red" name='razer' id='razer' onClick="MyWindow=window.open('resource/voucher4.html','MyWindow','width=600,height=600'); return false;"/>Redeem
                 </td>
                 </td>
             </tr>
