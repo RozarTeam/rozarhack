@@ -25,10 +25,10 @@
                 $user=$userDAO->retrieveUser($_POST['nric']);
                 if (!$user){
                     $_SESSION['errors'][]='Invalid NRIC!';
-                }elseif($_POST['DOB']!=$user->getDOB()){
+                }elseif($_POST['DOB']!=date('Y-m-d', strtotime($user->getDOB()))){
                     $_SESSION['errors'][]='Invalid Date Of Birth!';
                 }else{
-                    $status=$userDAO->updateNewPassword($nric,$password);
+                    $status=$userDAO->updateNewPassword($_POST['nric'],$_POST['pwd']);
                     if ($status){
                         echo "<script> 
                         alert('Password Updated Successfully');
