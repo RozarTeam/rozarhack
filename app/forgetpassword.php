@@ -8,13 +8,13 @@
 		if (!isset($_POST['nric']) || strlen(trim($_POST['nric'])) == 0){
 			$_SESSION['errors'][]='Please enter NRIC!';
 		}
-		if (!isset($_POST['password']) || strlen(trim($_POST['password'])) == 0){
-			$_SESSION['errors'][]='Please enter password!';
+		if (!isset($_POST['DOB']) || strlen(trim($_POST['DOB'])) == 0){
+			$_SESSION['errors'][]='Please enter Date of Birth!';
         }
 		if (!isset($_POST['pwd']) || strlen(trim($_POST['pwd'])) == 0){
 			$_SESSION['errors'][]='Please enter new password!';
 		}
-		if (!isset($_POST['pwd2']) || strlen(trim($_POST['pwd'])) == 0){
+		if (!isset($_POST['pwd2']) || strlen(trim($_POST['pwd2'])) == 0){
 			$_SESSION['errors'][]='Please enter confirm new password!';
         }
         if (count($_SESSION['errors'])==0){
