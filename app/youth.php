@@ -51,25 +51,34 @@ if(isset($_POST['name'])&&isset($_POST['date'])){
     <!-- Header Section -->
 	<header class="header-section">
 		<a href="index.html" class="site-logo">
-			<img src="img/logo.png" alt="" height="60" width="60">
+			<img src="img/logo.png" alt="">
 		</a>
 		<nav class="header-nav">
 			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
-				<li><a href="about-us.html">About Us</a></li>
-				<li><a href="#">Pages</a>
+				<li><a href="homepage-Loggedin.html" class="active">Home</a></li>
+				<li><a href="#">Profile</a>
 					<ul class="sub-menu">
-						<li><a href="about-us.html">About Us</a></li>
-						<li><a href="loans.html">Loans</a></li>
-						<li><a href="elements.html">elements</a></li>
+						<li><a href="loans.html">Account Details</a></li>
+						<li><a href="homepage-Financial Summary.html">Financial Summary</a></li>
+						<li><a href="#">Transactions</a></li>
+						<li><a href="loans.html">Apply for Loan</a></li>
 					</ul>
 				</li>
-				<li><a href="news.html">News</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">Deposit/Transfer</a></li>
+				<li><a href="financialplanner.html">Financial Planner</a></li>
+				<li><a href="#">Quests/Rewards</a>
+					<ul class="sub-menu">
+							<li><a href="quest.php">Quests and Games</a></li>
+							<li><a href="reward.php">Rewards</a></li>
+					</ul>
+				</li>
 			</ul>
 			<div class="header-right">
-				<a href="#" class="hr-btn"><i class="flaticon-029-telephone-1"></i>Call us now! </a>
-				<div class="hr-btn hr-btn-2">+45 332 65767 42</div>
+				<div class="header-right">
+					
+					<div class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
+				</div>
+				
 			</div>
 		</nav>
 	</header>
