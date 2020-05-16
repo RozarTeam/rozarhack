@@ -7,6 +7,8 @@
 	<meta name="keywords" content="loans, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
@@ -294,9 +296,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 ?>
 
 <script>
-	$(document).ready(function() {
-        $('#perc').hide();
-    });
 	
 	$("#loanform").submit(async (event) => {  
 		event.preventDefault();
@@ -305,12 +304,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		var income = parseInt($('#income').val());
 		var percent = (1-(amount/term)/term)*100;
 		percent = percent.toFixed(2);
-		// alert(percent);
 		var percElement = document.getElementById("perc");
-		var percText = document.createTextNode(percent+'% success rate');
-		console.log(percText);
-		percElement.appendChild(percText);
-		$('#perc').show();
+		// console.log(percText);
+		$('#perc').text(percent+'% success rate');
 	});
 
 	function logout(){
