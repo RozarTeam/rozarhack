@@ -113,7 +113,32 @@ class UserDAO {
         return $status; // Boolean True or False
     }
     
-   
+    public function updateNewPassword($nric,$password) {
+        
+        // Connect to Database
+        $connMgr = new ConnectionManager();
+        $conn = $connMgr->getConnection();
+        $password=password_hash($password,PASSWORD_DEFAULT);
+        // Prepare SQL
+        $sql = "UPDATE user SET password=:password where nric=:nric "; 
+        
+        // Run Query
+        $stmt=$conn->prepare($sql);
+        $stmt->bindParam(':password',$password,PDO::PARAM_STR);
+        $stmt->bindParam(':nric',$nric,PDO::PARAM_STR);
+
+        $status = False;
+
+        if ($stmt->execute()){
+            $status=True;
+        }
+
+        // Close Query/Connection
+        $stmt = null;
+        $conn = null;
+
+        return $status; // Boolean True or False
+    }
 }
 
 
