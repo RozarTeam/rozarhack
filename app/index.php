@@ -17,7 +17,7 @@
 			$message=$userDAO->authenticate($nric,$password);
 			if ($message=='SUCCESS'){
 				$_SESSION['loggedIn']=$_POST['nric'];
-				header('Location: homepage-Loggedin.html');
+				header('Location: homepage-Loggedin.php');
 			}else{
 				$_SESSION['errors'][]=$message;
 			}
@@ -76,7 +76,7 @@
 				<li><a href="#">Pages</a>
 					<ul class="sub-menu">
 						<li><a href="about-us.html">About Us</a></li>
-						<li><a href="loans.html">Loans</a></li>
+						<li><a href="#">Loans</a></li>
 						<li><a href="elements.html">elements</a></li>
 					</ul>
 				</li>

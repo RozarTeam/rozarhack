@@ -94,7 +94,7 @@
 				<li><a href="#">Pages</a>
 					<ul class="sub-menu">
 						<li><a href="about-us.html">About Us</a></li>
-						<li><a href="loans.html">Loans</a></li>
+						<li><a href="#">Loans</a></li>
 						<li><a href="elements.html">elements</a></li>
 					</ul>
 				</li>

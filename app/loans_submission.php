@@ -39,22 +39,22 @@
 
 	<!-- Header Section -->
 	<header class="header-section">
-			<a href="homepage-Loggedin.html" class="site-logo">
+			<a href="homepage-Loggedin.php" class="site-logo">
 				<img src="img/logo.png" alt="">
 			</a>
 			<nav class="header-nav">
 				<ul class="main-menu">
-					<li><a href="homepage-Loggedin.html" class="active">Home</a></li>
+					<li><a href="homepage-Loggedin.php" class="active">Home</a></li>
 					<li><a href="#">Profile</a>
 						<ul class="sub-menu">
 							<li><a href="#">Account Details</a></li>
-							<li><a href="homepage-Financial Summary.html">Financial Summary</a></li>
+							<li><a href="homepage-Financial Summary.php">Financial Summary</a></li>
 							<li><a href="#">Transactions</a></li>
 							<li><a href="loans.php">Apply for Loan</a></li>
 						</ul>
 					</li>
 					<li><a href="#">Deposit/Transfer</a></li>
-					<li><a href="financialplanner.html">Financial Planner</a></li>
+					<li><a href="financialplanner.php">Financial Planner</a></li>
 					<li><a href="#">Quests/Rewards</a>
 						<ul class="sub-menu">
 								<li><a href="quest.php">Quests and Games</a></li>
@@ -168,7 +168,7 @@
 	<!-- Footer Section -->
 	<footer class="footer-section">
 		<div class="container">
-			<a href="homepage-Loggedin.html" class="footer-logo">
+			<a href="homepage-Loggedin.php" class="footer-logo">
 				<img src="img/logo.png" alt="">
 			</a>
 			<div class="row">

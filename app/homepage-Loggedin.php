@@ -70,7 +70,7 @@
 			]);
 	
 			var options = {
-			  title: 'My Financial Summary of All Time	',
+			  title: 'My Financial Summary May 2020',
 			  is3D: true,
 			};
 	
@@ -87,38 +87,38 @@
 
 	<!-- Header Section -->
 	<header class="header-section">
-			<a href="homepage-Loggedin.html" class="site-logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<nav class="header-nav">
-				<ul class="main-menu">
-					<li><a href="homepage-Loggedin.html" class="active">Home</a></li>
-					<li><a href="#">Profile</a>
-						<ul class="sub-menu">
-							<li><a href="#">Account Details</a></li>
-							<li><a href="homepage-Financial Summary.html">Financial Summary</a></li>
-							<li><a href="#">Transactions</a></li>
-							<li><a href="loans.php">Apply for Loan</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Deposit/Transfer</a></li>
-					<li><a href="financialplanner.html">Financial Planner</a></li>
-					<li><a href="#">Quests/Rewards</a>
-						<ul class="sub-menu">
-								<li><a href="quest.php">Quests and Games</a></li>
-								<li><a href="reward.php">Rewards</a></li>
-						</ul>
-					</li>
-				</ul>
+		<a href="homepage-Loggedin.php" class="site-logo">
+			<img src="img/logo.png" alt="">
+		</a>
+		<nav class="header-nav">
+			<ul class="main-menu">
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">Profile</a>
+					<ul class="sub-menu">
+						<li><a href="#">Account Details</a></li>
+						<li><a href="homepage-Financial Summary.php">Financial Summary</a></li>
+						<li><a href="#">Transactions</a></li>
+						<li><a href="loans.php">Apply for Loan</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Deposit/Transfer</a></li>
+				<li><a href="financialplanner.php">Financial Planner</a></li>
+				<li><a href="#">Quests/Rewards</a>
+					<ul class="sub-menu">
+							<li><a href="quest.php">Quests and Games</a></li>
+							<li><a href="reward.php">Rewards</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="header-right">
 				<div class="header-right">
-					<div class="header-right">
-						
-							<div onclick="logout()" class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
-					</div>
 					
+					<div onclick="logout()" class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
 				</div>
-			</nav>
-		</header>
+				
+			</div>
+		</nav>
+	</header>
 	<!-- Header Section end -->
 
 	<section class="cta-section set-bg" data-setbg="img/cta-bg.jpg">
@@ -130,22 +130,14 @@
 	
 
 	<div class="row">
-	  <div class="column2" style="background-color:#fff;">
-		<h2>&nbsp; &nbsp; &nbsp; &nbsp;My Financial Summary</h2>
-		<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+	  <div class="column" style="background-color:#fff;">
+		<h2>&nbsp; &nbsp; Welcome Back</h2><br>
+		<h5>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Your last login was 11:00 AM on Saturday 16th May 2020 </h5>
+		<h5>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;(You have no new messages) </h5>
 		
 	  </div>
-	  <div class="column2" style="background-color:#fff;">
-		<h2>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Summary Report</h2><br><br><br><br>
-		<h5>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; TOTAL ASSETS : $50928</h5><br>
-		<h5>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 	  Current Assets : $30827</h5><br>
-		<h5>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  Cash : $19726</h5><br>
-		<h5>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  Receivables : $ 8273</h5><br>
-		<h5>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  Inventory : $3293</h5><br>
-		<h5>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; TOTAL NET SAVINGS : $17264</h5><br>
-		<h5>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; TOTAL NET EXPENDITURE : $11293</h5><br>
-		
-		
+	  <div class="column" style="background-color:#fff;">
+		<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 		
 		
 
@@ -164,10 +156,13 @@
 	<!-- CTA Section end -->
 	<section class="cta-section set-bg" data-setbg="img/cta-bg.jpg">
 		<div class="container">
-			
+			<h2>Already have a <strong>L2Go</strong> Bank Loan?</h2>
+			<h5>If you're thinking about borrowing more, we're here to help.</h5>
+			<a href="#" class="site-btn sb-dark sb-big">Find out More</a>
 		</div>
 	</section>
 	<!-- CTA Section end -->
+
 
 
 
