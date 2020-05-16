@@ -16,6 +16,7 @@
 			$userDAO= new UserDAO();
 			$message=$userDAO->authenticate($nric,$password);
 			if ($message=='SUCCESS'){
+				$_SESSION['loggedIn']=$_POST['nric'];
 				header('Location: homepage-Loggedin.html');
 			}else{
 				$_SESSION['errors'][]=$message;
