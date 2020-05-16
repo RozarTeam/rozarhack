@@ -1,6 +1,6 @@
 <?php
 
-class Student {
+class User {
 
     private $nric;
     private $password;

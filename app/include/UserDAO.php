@@ -47,7 +47,7 @@ class UserDAO {
         // Write & Prepare SQL Query (take care of Param Binding if necessary)
         $sql = "SELECT * FROM USER WHERE nric=:nric";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':userid',$userid,PDO::PARAM_STR);
+        $stmt->bindParam(':nric',$nric,PDO::PARAM_STR);
         
         // Execute SQL Query
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -57,7 +57,7 @@ class UserDAO {
         // $user=[];
         $user = false;
         if ($row=$stmt->fetch()){
-            $user = new User($row['nric'], $row['password'], $row['name'], $row['race'], $row['DOB'],$row['Sex'],$row['CountryOfBirth'],$row['Address'],$row['email'],$row['contactNo']);
+            $user = new User($row['nric'], $row['password'], $row['name'], $row['race'], $row['DOB'],$row['Sex'],$row['CountryOfBirth'],$row['Address'],$row['Email'],$row['ContactNo']);
         }
         
         // Clear Resources $stmt, $pdo
@@ -75,6 +75,7 @@ class UserDAO {
 
         $nric=$User->getNric();
         $password=$User->getPassword();
+        $password=password_hash($password,PASSWORD_DEFAULT);
         $name=$User->getName();
         $race=$User->getRace();
         $DOB=$User->getDOB();
@@ -86,12 +87,12 @@ class UserDAO {
 
         // Prepare SQL
         $sql = "INSERT INTO USER (nric, password, name, race, DOB, sex, CountryOfBirth, address, email, contactNo) VALUES
-        (:userid, :password, :name, :race, :DOB, :sex, :CountryOfBirth, :address, :email, :contactNo)"; 
+        (:nric, :password, :name, :race, :DOB, :sex, :CountryOfBirth, :address, :email, :contactNo)"; 
         $stmt=$conn->prepare($sql);
-        $stmt->bindParam(':nric',$userid,PDO::PARAM_STR);
+        $stmt->bindParam(':nric',$nric,PDO::PARAM_STR);
         $stmt->bindParam(':password',$password,PDO::PARAM_STR);
         $stmt->bindParam(':name',$name,PDO::PARAM_STR);
-        $stmt->bindParam(':race',$name,PDO::PARAM_STR);
+        $stmt->bindParam(':race',$race,PDO::PARAM_STR);
         $stmt->bindParam(':DOB',$DOB,PDO::PARAM_STR);
         $stmt->bindParam(':sex',$sex,PDO::PARAM_STR);
         $stmt->bindParam(':CountryOfBirth',$CountryOfBirth,PDO::PARAM_STR);

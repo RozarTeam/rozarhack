@@ -24,7 +24,7 @@ USE `rozar`;
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `nric` int(11) NOT NULL,
+  `nric` varchar(11) NOT NULL,
   `password` varchar(1000) NOT NULL,
   `name` varchar(45) NOT NULL,
   `race` varchar(45) NOT NULL,

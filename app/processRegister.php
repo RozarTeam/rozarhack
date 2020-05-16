@@ -3,24 +3,25 @@
     if (!isset($_SESSION['front']) && !isset($_SESSION['back'])){
         header('Location: register.php');
     }
-    if (!isset($_SESSION['submit'])){
+    if (isset($_POST['submit'])){
         $_SESSION['errors']=[];
         if ($_POST['pwd']!= $_POST['pwd2']){
             $_SESSION['errors'][]="Password does not match!";
         }else{
             $userDAO= new userDAO();
             if ($userDAO->retrieveUser($_POST['nric'])){
-                $_SESSION['errors'][]="You have already registered before";
+                echo"<script>alert('You have already registered before';</script>";
             }else{
                 $User= new User($_POST['nric'],$_POST['pwd'], $_POST['name'], $_POST['race'], $_POST['DOB'], $_POST['sex'], $_POST['CountryOfBirth'], $_POST['address'], $_POST['email'], $_POST['contactNo']);
             
                 $status=$userDAO->add($User);
                 if ($status){
-                    alert("User Registered Successfully");
+                    echo"<script>alert('User Registered Successfully');</script>";
                 }else{
-                    alert("User Registeration Failed");
+                    echo"<scriptalert('User Registeration Failed');</script>";
                 }
-                header('Location: index.php');
+                header( "Refresh:1; url = index.php");
+                // header("Location: index.php");
             }
             
         }
