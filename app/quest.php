@@ -63,7 +63,7 @@
     </head>
     <body>
     <header class="header-section">
-		<a href="index.html" class="site-logo">
+		<a href="homepage-Loggedin.html" class="site-logo">
 			<img src="img/logo.png" alt="">
 		</a>
 		<nav class="header-nav">
@@ -175,7 +175,7 @@
         <!-- Footer Section -->
 	<footer class="footer-section">
 		<div class="container">
-			<a href="index.html" class="footer-logo">
+			<a href="homepage-Loggedin.html" class="footer-logo">
 				<img src="img/logo.png" alt="">
 			</a>
 			<div class="row">

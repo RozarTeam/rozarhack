@@ -83,12 +83,12 @@
 
 	<!-- Header Section -->
 	<header class="header-section">
-		<a href="index.html" class="site-logo">
+		<a href="index.php" class="site-logo">
 			<img src="img/logo.png" alt="">
 		</a>
 		<nav class="header-nav">
 			<ul class="main-menu" >
-				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="index.php" class="active">Home</a></li>
 				
 				<li><a href="about-us.html">About Us</a></li>
 				<li><a href="about-us.html">Financial Services</a></li>
@@ -132,7 +132,7 @@
     	<!-- Footer Section -->
 	<footer class="footer-section">
 		<div class="container">
-			<a href="index.html" class="footer-logo">
+			<a href="index.php" class="footer-logo">
                 <img src="img/logo.png" alt="">
 			</a>
 			<div class="row">
