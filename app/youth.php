@@ -58,10 +58,10 @@ if(isset($_POST['name'])&&isset($_POST['date'])){
 				<li><a href="homepage-Loggedin.html" class="active">Home</a></li>
 				<li><a href="#">Profile</a>
 					<ul class="sub-menu">
-						<li><a href="loans.html">Account Details</a></li>
+						<li><a href="#">Account Details</a></li>
 						<li><a href="homepage-Financial Summary.html">Financial Summary</a></li>
 						<li><a href="#">Transactions</a></li>
-						<li><a href="loans.html">Apply for Loan</a></li>
+						<li><a href="loans.php">Apply for Loan</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Deposit/Transfer</a></li>

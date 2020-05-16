@@ -7,30 +7,30 @@
 // $voucher_json=file_get_contents($api_url);
 // header('Location: '.$api_url);
 // echo "A";
-// $curl = curl_init();
+$curl = curl_init();
 
-// curl_setopt_array($curl, array(
-//   CURLOPT_URL => "https://api.perxtech.io/v4/vouchers",
-//   CURLOPT_RETURNTRANSFER => true,
-//   CURLOPT_ENCODING => "",
-//   CURLOPT_MAXREDIRS => 10,
-//   CURLOPT_TIMEOUT => 0,
-//   CURLOPT_FOLLOWLOCATION => true,
-//   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-//   CURLOPT_CUSTOMREQUEST => "GET",
-//   CURLOPT_HTTPHEADER => array(
-//     "Authorization: Bearer 1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3"
-//   ),
-// ));
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.perxtech.io/v4/vouchers",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "Authorization: Bearer 1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3"
+  ),
+));
 
-// $response = curl_exec($curl);
+$response = curl_exec($curl);
 
-// IF($response == FALSE) {
-//     echo "cURL Error!".curl_error($curl);
-// }
-// curl_close($curl);
+IF($response == FALSE) {
+    echo "cURL Error!".curl_error($curl);
+}
+curl_close($curl);
 
-// echo $response;
+echo $response;
 
 
 ?>
@@ -93,10 +93,10 @@
 				<li><a href="homepage-Loggedin.html" class="active">Home</a></li>
 				<li><a href="#">Profile</a>
 					<ul class="sub-menu">
-						<li><a href="loans.html">Account Details</a></li>
+						<li><a href="#">Account Details</a></li>
 						<li><a href="homepage-Financial Summary.html">Financial Summary</a></li>
 						<li><a href="#">Transactions</a></li>
-						<li><a href="loans.html">Apply for Loan</a></li>
+						<li><a href="loans.php">Apply for Loan</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Deposit/Transfer</a></li>

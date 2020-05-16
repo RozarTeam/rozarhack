@@ -29,6 +29,7 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	
 
 </head>
 <body>
@@ -47,10 +48,10 @@
 					<li><a href="homepage-Loggedin.html" class="active">Home</a></li>
 					<li><a href="#">Profile</a>
 						<ul class="sub-menu">
-							<li><a href="loans.html">Account Details</a></li>
+							<li><a href="#">Account Details</a></li>
 							<li><a href="homepage-Financial Summary.html">Financial Summary</a></li>
 							<li><a href="#">Transactions</a></li>
-							<li><a href="loans.html">Apply for Loan</a></li>
+							<li><a href="loans.php">Apply for Loan</a></li>
 						</ul>
 					</li>
 					<li><a href="#">Deposit/Transfer</a></li>
@@ -122,12 +123,17 @@
 									<div class="container">
 										<div class="row">
 											<div class="col-lg-6">
-												<form class="hero-form">
-													<input type="text" placeholder="Loan Amount (in dollars)" name="amount">
-													<input type="text" placeholder="Loan Term (in months)" name="term">
-													<input type="text" placeholder="Monthy Income (in dollars)" name="income">
-													<button class="site-btn">Calculate Likelihood Now!</button> insert percentage here
+												<form class="hero-form" method='post' id="loanform">
+													<input type="text" placeholder="Loan Amount (in dollars)" name="amount" id='amount'>
+													<input type="text" placeholder="Loan Term (in months)" name="term" id='term'>
+													<input type="text" placeholder="Monthy Income (in dollars)" name="income" id='income'>	
+													<button type='submit' class="site-btn" id="calcbutton">Calculate Likelihood Now!</button> 
+													<!-- <h5 style='color:white' id='perc'>hello</h5> -->
 												</form>
+											</div>
+											<div class="col-lg-6">
+												<br><br><br><br><br><br>
+												<h1 style='color:white' id='perc'></h1>
 											</div>
 										</div>
 									</div>
@@ -276,3 +282,34 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	</body>
 </html>
+
+<?php
+	// if(isset($_POST['amount'])&&isset($_POST['term'])&&isset($_POST['income'])){
+	// 	$amount=$_POST['amount'];
+	// 	$term=$_POST['term'];
+	// 	$income=$_POST['income'];
+		// echo '<script>alert("'.$b.'");</script>';
+	// }
+
+?>
+
+<script>
+	$(document).ready(function() {
+        $('#perc').hide();
+    });
+	
+	$("#loanform").submit(async (event) => {  
+		event.preventDefault();
+		var amount = parseInt($('#amount').val());
+		var term = parseInt($('#term').val());
+		var income = parseInt($('#income').val());
+		var percent = (1-(amount/term)/term)*100;
+		percent = percent.toFixed(2);
+		// alert(percent);
+		var percElement = document.getElementById("perc");
+		var percText = document.createTextNode(percent+'%');
+		console.log(percText);
+		percElement.appendChild(percText);
+		$('#perc').show();
+	});
+</script>
