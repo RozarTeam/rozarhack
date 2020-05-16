@@ -65,7 +65,7 @@
 				<div class="header-right">
 					<div class="header-right">
 						
-						<div class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
+							<div onclick="logout()" class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
 					</div>
 					
 				</div>
@@ -124,7 +124,7 @@
 						<button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
 					  </span> -->
 					</div>
-					<button type='button' class="w3-button w3-red" id='scratchcard' onclick="scratchcard()">Upload
+					<button type='button' class="w3-button w3-red" id='scratchcard' onclick="upload()">Upload
 				</div>
 				</div>
 			</div>
@@ -241,3 +241,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	</body>
 </html>
+
+
+<script>
+function upload() {
+	alert('Document has been submitted.')
+	location.reload();
+}
+
+function logout(){
+	window.location.href = 'logout.php'
+}
+</script>

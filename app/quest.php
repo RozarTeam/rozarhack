@@ -89,7 +89,7 @@
 			<div class="header-right">
 				<div class="header-right">
 					
-					<div class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
+                    <div onclick="logout()" class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
 				</div>
 				
 			</div>
@@ -255,4 +255,9 @@ function scratchcard(){
 function gongcha(){
     window.location.replace("https://light.microsite.perxtech.io/game/3?token=1495fbc4c54c80bcc27dc3bf8e37dc71d880ff79dc5347372bc2a1baa6bd8fc3&redirect_uri=http://localhost/rozar/app/quest.php");
 }
+
+function logout(){
+	window.location.href = 'logout.php'
+}
+
 </script>

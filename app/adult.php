@@ -78,7 +78,7 @@ if(isset($_POST['name'])&&isset($_POST['date'])){
 			<div class="header-right">
 				<div class="header-right">
 					
-					<div class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
+					<div onclick="logout()" class="hr-btn hr-btn-2"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</div>
 				</div>
 				
 			</div>
@@ -212,3 +212,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     
 }
 ?>
+
+<script>
+function logout(){
+	window.location.href = 'logout.php'
+}
+</script>
