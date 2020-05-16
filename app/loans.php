@@ -1,7 +1,11 @@
+<?php
+require_once 'include/common.php';
+require_once 'include/protect.php';
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>LOANS2GO | Loans HTML Template</title>
+	<title>Rozar | Loans</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="loans HTML Template">
 	<meta name="keywords" content="loans, html">
@@ -304,6 +308,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		var income = parseInt($('#income').val());
 		var percent = (1-(amount/term)/term)*100;
 		percent = percent.toFixed(2);
+		if(percent<0){
+			percent = 0;
+		}
 		var percElement = document.getElementById("perc");
 		// console.log(percText);
 		$('#perc').text(percent+'% success rate');

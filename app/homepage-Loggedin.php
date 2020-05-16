@@ -1,7 +1,12 @@
+<?php
+require_once 'include/common.php';
+require_once 'include/protect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>ROZAR | Loans HTML Template</title>
+	<title>ROZAR | Homepage</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="loans HTML Template">
 	<meta name="keywords" content="loans, html">

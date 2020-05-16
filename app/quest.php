@@ -7,6 +7,9 @@
 // $voucher_json=file_get_contents($api_url);
 // header('Location: '.$api_url);
 
+require_once 'include/common.php';
+require_once 'include/protect.php';
+
 ?>
 
 <html>

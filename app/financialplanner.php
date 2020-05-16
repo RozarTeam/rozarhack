@@ -1,7 +1,11 @@
+<?php
+require_once 'include/common.php';
+require_once 'include/protect.php';
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>RozarBanking | Rozar</title>
+	<title>Rozar | Financial Planning</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="loans HTML Template">
 	<meta name="keywords" content="loans, html">
