@@ -209,11 +209,8 @@ $(async () => {
                     $('#CountryOfBirth').val(data.vision.extract.countryOfBirth);
                 }
                 if (data.vision.extract.dob.length!=0){
-                    var datearray = data.vision.extract.dob.split("-");
-                    var DOB=new Date(datearray[2]+"/"+datearray[1]+"/"+datearray[0]);
-                    var formattedDate= DOB.getDate() + "/" + (DOB.getMonth() + 1) + "/" + DOB.getFullYear();
-                    console.log(formattedDate);
-                    $('#DOB').val(formattedDate);
+                    dateArray=data.vision.extract.dob.split('-');
+                    $('#DOB').val(dateArray[2]+"-"+ dateArray[1] +"-"+ dateArray[0]);
                 }
                 if (data.vision.extract.name.length!=0){
                     $('#name').val(data.vision.extract.name);
